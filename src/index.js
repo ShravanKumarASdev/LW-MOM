@@ -2,12 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Events from './components/Events';
+import Notfound from './components/notfound';
+import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+const routing = (
+  <Router>
+    <div>
+      <Route path="/" component={App} />
+      <Route path="/events/:type" component={Events} />
+    </div>
+  </Router>
+)
+
+ReactDOM.render(routing,
   document.getElementById('root')
 );
 
