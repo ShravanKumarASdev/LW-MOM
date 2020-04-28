@@ -46,7 +46,7 @@ class Events extends React.Component {
             </ReactBootstrap.ListGroup.Item>    
           ))}
         </ReactBootstrap.ListGroup>
-        {this.state.selectedImage==="" &&
+        {this.state.selectedImage!=="" &&
           <ReactBootstrap.Image width={800} height={400} src={this.state.selectedImage} />
         }
       </div>
